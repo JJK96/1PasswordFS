@@ -1,0 +1,3 @@
+[submodule "CommandFS"]
+	path = CommandFS
+	url = git@github.com:JJK96/CommandFS.git
