@@ -35,4 +35,9 @@ $ cat ~/.config/someprogram/config.ini
 password="mypassword"
 ```
 
+## Limitations
+
+Currently, if you read a file while 1Password is still locked, it freezes the daemon. This is due to [a bug in 1password-cli](https://1password.community/discussion/139010/cli-hangs-when-requesting-items).
+You can fix this by running the `./reload.sh` script.
+
 [CommandFS]: https://github.com/JJK96/CommandFS
