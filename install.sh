@@ -8,6 +8,8 @@ cat 1password_fs.plist | sed \
     -e "s#\\\$OP\\\$#$op#" > "$plist_file"
 
 launchctl load "$plist_file"
+
 cat settings.sh <(tail +3 1passwordfs) > "$bin_dir/1passwordfs"
+chmod +x "$bin_dir/1passwordfs"
 
 echo "Succesfully installed and loaded service"
