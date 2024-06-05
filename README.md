@@ -39,9 +39,7 @@ password="mypassword"
 
 ## Limitations
 
-In `op` version 2.26.0 or earlier, if you read a file while 1Password is still locked, it freezes the daemon. This is due to [a bug in 1password-cli](https://1password.community/discussion/139010/cli-hangs-when-requesting-items).
-You can fix this by running `1passwordfs restart` or the `./reload.sh` script.
-
-This is fixed since 2.26.1.
+* In `op` version 2.26.0 or earlier, if you read a file while 1Password is still locked, it freezes the daemon. This is due to [a bug in 1password-cli](https://1password.community/discussion/139010/cli-hangs-when-requesting-items). You can fix this by running `1passwordfs restart` or the `./reload.sh` script. This is fixed since 2.26.1.
+* As with all FUSE-based solutions, when you update MacOS, the MacFUSE driver is no longer trusted. This means that after updates, you need to reinstall MacFUSE and reboot the OS.
 
 [CommandFS]: https://github.com/JJK96/CommandFS
