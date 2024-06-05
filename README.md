@@ -15,6 +15,8 @@ Currently, all installation scripts are for MacOS, but it should be easy to perf
 make install
 ```
 
+In addition, ensure that spotlight does not index your 1PasswordFS directory. You can configure this in Settings > Siri & Spotlight > Spotlight Privacy.
+
 ### Other
 
 - Install FUSE
@@ -37,7 +39,9 @@ password="mypassword"
 
 ## Limitations
 
-Currently, if you read a file while 1Password is still locked, it freezes the daemon. This is due to [a bug in 1password-cli](https://1password.community/discussion/139010/cli-hangs-when-requesting-items).
+In `op` version 2.26.0 or earlier, if you read a file while 1Password is still locked, it freezes the daemon. This is due to [a bug in 1password-cli](https://1password.community/discussion/139010/cli-hangs-when-requesting-items).
 You can fix this by running `1passwordfs restart` or the `./reload.sh` script.
+
+This is fixed since 2.26.1.
 
 [CommandFS]: https://github.com/JJK96/CommandFS
